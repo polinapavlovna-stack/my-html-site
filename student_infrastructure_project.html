@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -166,44 +166,76 @@
         <div>
           <label class="caption" for="objectType">Тип объекта</label>
           <select id="objectType">
-            <option value="">Выберите тип</option>
-            <option>Учебная аудитория</option>
+            <option value="">Компьютерный класс</option>
             <option>Компьютерный класс</option>
-            <option>Рабочее место преподавателя</option>
-            <option>Зона отдыха студентов</option>
-            <option>Серверный узел / сетевая зона</option>
-            <option>Офисное рабочее место</option>
-            <option>Другое пространство</option>
           </select>
         </div>
         <div>
           <label class="caption" for="roomNumber">Номер аудитории / название организации</label>
-          <input class="field" id="roomNumber" type="text" placeholder="Аудитория 6378" />
+          <input class="field" id="roomNumber" type="text" placeholder="ФЭМ, аудитория 6378" />
         </div>
         <div>
           <label class="caption" for="audience">Целевая аудитория</label>
-          <input class="field" id="audience" type="text" placeholder="студенты, преподаватели, сотрудники деканата" />
+          <input class="field" id="audience" type="text" placeholder="Студенты, преподаватели, сотрудники деканата" />
         </div>
         <div class="wide">
           <label class="caption" for="uniqueness">Почему выбранный объект не повторяет чужой проект</label>
-          <textarea id="uniqueness" class="small" placeholder="аудитория выбрана только нами, поэтому модернизировать можем только мы."></textarea>
+          <textarea id="uniqueness" class="small" placeholder="Наша команда анализирует конкретно аудиторию 6378 и её особенности, тогда как другие команды изучают другие помещения или зоны с иным назначением и характеристиками."></textarea>
         </div>
         <div class="wide">
           <label class="caption" for="projectGoal">Цель улучшения</label>
-          <textarea id="projectGoal" placeholder="Сделать держатель для двери."></textarea>
+          <textarea id="projectGoal" placeholder="Цель проекта — оптимизировать аудиторию 6378 за счёт перестановки мебели и улучшения организации пространства, чтобы увеличить количество удобных рабочих мест, обеспечить безопасное передвижение студентов и преподавателя и повысить эффективность проведения занятий."></textarea>
         </div>
       </div>
     </section>
 
-    <section cl ass="section">
+    <section class="section">
       <h2>2. Команда и обязанности</h2>
       <p class="lead">Работать можно индивидуально или командой до 3 человек. Даже в команде каждый участник должен оставить собственный вывод и показать личный вклад.</p>
-      <div id="teamList" class="row-list"></div>
+      <div id="teamList" class="row-list">
+        <div class="dynamic-row">
+      <div class="row-head">
+        <div class="row-title" data-dynamic-number="Участник">Участник 1</div>
+        <button class="btn danger remove-btn" type="button" data-remove-team="0">Удалить</button>
+      </div>
+      <div class="mini-grid">
+        <div><label class="caption">ФИО</label><input class="field" data-team="0" data-field="name" type="text" value="" placeholder="Бронская Полина Павловна"></div>
+        <div><label class="caption">Роль в проекте</label><input class="field" data-team="0" data-field="role" type="text" value="" placeholder="Смета и аудит"></div>
+        <div><label class="caption">Зона ответственности</label><input class="field" data-team="0" data-field="duties" type="text" value="" placeholder="Что именно сделал участник"></div>
+      </div>
+      <div><label class="caption">Личный вывод участника</label><textarea class="small" data-team="0" data-field="conclusion" placeholder="Что участник понял о выбранном пространстве, закупке, эргономике или инфраструктуре."></textarea></div>
+      </div>
+      </div>
+      <div class="dynamic-row">
+      <div class="row-head">
+        <div class="row-title" data-dynamic-number="Участник">Участник 2</div>
+        <button class="btn danger remove-btn" type="button" data-remove-team="1">Удалить</button>
+      </div>
+      <div class="mini-grid">
+        <div><label class="caption">ФИО</label><input class="field" data-team="1" data-field="name" type="text" value="" placeholder="Худякова Арина Юрьевна"></div>
+        <div><label class="caption">Роль в проекте</label><input class="field" data-team="1" data-field="role" type="text" value="" placeholder="HTML"></div>
+        <div><label class="caption">Зона ответственности</label><input class="field" data-team="1" data-field="duties" type="text" value="" placeholder="Что именно сделал участник"></div>
+      </div>
+      <div><label class="caption">Личный вывод участника</label><textarea class="small" data-team="1" data-field="conclusion" placeholder="Что участник понял о выбранном пространстве, закупке, эргономике или инфраструктуре."></textarea></div>
+    </div>
+      </div>
+ <div class="dynamic-row">
+      <div class="row-head">
+        <div class="row-title" data-dynamic-number="Участник">Участник 3</div>
+        <button class="btn danger remove-btn" type="button" data-remove-team="2">Удалить</button>
+      </div>
+      <div class="mini-grid">
+        <div><label class="caption">ФИО</label><input class="field" data-team="2" data-field="name" type="text" value="" placeholder="Шерназарова Диана Бегимназаровна"></div>
+        <div><label class="caption">Роль в проекте</label><input class="field" data-team="2" data-field="role" type="text" value="" placeholder="Дизайн"></div>
+        <div><label class="caption">Зона ответственности</label><input class="field" data-team="2" data-field="duties" type="text" value="" placeholder="Что именно сделал участник"></div>
+      </div>
+      <div><label class="caption">Личный вывод участника</label><textarea class="small" data-team="2" data-field="conclusion" placeholder="Что участник понял о выбранном пространстве, закупке, эргономике или инфраструктуре."></textarea></div>
+    </div>
+  </div>
       <div class="actions">
         <button class="btn action" id="addMemberBtn" type="button">+ Добавить участника</button>
       </div>
     </section>
-
     <section class="section">
       <h2>3. Универсальный стандарт анализа</h2>
       <p class="lead">Используйте эту логику как единый стандарт подбора решений для любой организации: сначала задачи и пользователи, затем пространство, техника, сеть, безопасность, эксплуатация и бюджет.</p>
@@ -419,7 +451,7 @@ let state = {
   equipment:[{name:'', specs:'', qty:'', price:'', reason:'', priority:'Рекомендуемая'}],
   photos:[{path:'', caption:'', finding:''},{path:'', caption:'', finding:''},{path:'', caption:'', finding:''}],
   visuals:[
-    {path:'', prompt:'', purpose:'', criteria:''},
+     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
     {path:'', prompt:'', purpose:'', criteria:''},
@@ -634,7 +666,7 @@ function loadDraft(){
     }
   } catch(e){}
 }
-
+  
 function previewImage(input, previewSelector){
   const file = input.files && input.files[0];
   const preview = document.querySelector(previewSelector);
@@ -672,7 +704,7 @@ document.addEventListener('click', event => {
   if(target.matches('[data-remove-team]')){
     if(state.team.length > 1){
       captureState();
-      state.team.splice(Number(target.dataset.removeTeam), 1);
+        state.team.splice(Number(target.dataset.removeTeam), 1);
       renderTeam();
       saveDraft();
     }
